@@ -1,6 +1,15 @@
 <h1 class="typewriter-container"> <span class="typewriter-text">Hi, I’m N4z0k!</span> 👋 </h1>
 
-<a href="https://tryhackme.com/p/N4z0k" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/TryHackMe-N4z0k-red?style=flat&logo=tryhackme&logoColor=white" alt="TryHackMe" /></a> <a href="https://www.credly.com/users/alfeze-ali/badges" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Credly-Badges-FF6B00?style=flat&logo=credly&logoColor=white" alt="Credly" /></a>
+<div class="profile-badges">
+  <a class="profile-badge badge-red" href="https://tryhackme.com/p/N4z0k" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/><path d="m9.5 12 1.8 1.8L15 10"/></svg>
+    <span>TryHackMe <b>N4z0k</b></span>
+  </a>
+  <a class="profile-badge badge-orange" href="https://www.credly.com/users/alfeze-ali/badges" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></svg>
+    <span>Credly <b>Badges</b></span>
+  </a>
+</div>
 
 Cybersecurity & Networking student. Welcome to my digital garden — a space documenting everything I learn about systems administration, offensive security, and network engineering.
 
@@ -16,9 +25,36 @@ Feel free to browse through the graph or jump into a topic below.
 ---
 ## Knowledge Map
 
-| Systems & Networks                                                                          | Security & Offense                                                                           | Practice & Reference                                                                                                    |
-| ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| - [[MOC_Networking\|Networking]] <br>- [[MOC_Linux\|Linux]]  <br>- [[MOC_Windows\|Windows]] | - [[MOC_Security\|Security]] <br>- [[MOC_Pentesting\|Pentesting]] <br>- [[MOC_Tools\|Tools]] | - [[MOC_Hands-on\| Hands-on]] <br>- [[MOC_Development\|Development]] <br>- [[Markdown_Cheatsheet\|Markdown Cheatsheet]] |
+<div class="knowledge-map">
+
+<div class="km-card">
+<div class="km-card-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg><h3>Systems & Networks</h3></div>
+
+- [[MOC_Networking|Networking]]
+- [[MOC_Linux|Linux]]
+- [[MOC_Windows|Windows]]
+
+</div>
+
+<div class="km-card">
+<div class="km-card-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h3>Security & Offense</h3></div>
+
+- [[MOC_Security|Security]]
+- [[MOC_Pentesting|Pentesting]]
+- [[MOC_Tools|Tools]]
+
+</div>
+
+<div class="km-card">
+<div class="km-card-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><h3>Practice & Reference</h3></div>
+
+- [[MOC_Hands-on|Hands-on]]
+- [[MOC_Development|Development]]
+- [[Markdown_Cheatsheet|Markdown Cheatsheet]]
+
+</div>
+
+</div>
 
 ---
 
