@@ -20,8 +20,6 @@ This site contains:
 
 Feel free to browse through the graph or jump into a topic below.
 
-*Note: Blue entries are published notes; unlinked items are planned or in progress.*
-
 ---
 ## Knowledge Map
 
