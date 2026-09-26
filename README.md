@@ -1,17 +1,32 @@
-# Quartz v5
+# 🌐 N4z0k's Vault — Digital Garden & Knowledge Base
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+[![Site](https://img.shields.io/badge/Site-n4z0k.github.io-10b981?style=flat-square&logo=safari)](https://n4z0k.github.io)
+[![TryHackMe](https://img.shields.io/badge/TryHackMe-N4z0k-red?style=flat-square&logo=tryhackme)](https://tryhackme.com/p/N4z0k)
+[![Credly](https://img.shields.io/badge/Credly-Badges-orange?style=flat-square&logo=credly)](https://www.credly.com/users/alfeze-ali/badges)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+> Welcome to my personal technical documentation and cybersecurity digital garden.
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+This repository contains my personal notes, writeups, cheat sheets, and conceptual breakdowns covering systems administration, offensive security, and network engineering.
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+---
 
-## Sponsors
+### 🚀 Live Website
+The interactive vault is hosted on GitHub Pages via Quartz 5:
+👉 **[https://n4z0k.github.io](https://n4z0k.github.io)**
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+---
+
+### 🗺️ Structure & Topics
+The content is organized using Map of Contents (MOCs):
+
+* **Systems & Networks:** Networking protocols (OSPF, BGP, etc.), Linux administration, Windows Active Directory.
+* **Security & Offense:** Penetration testing methodologies, enumeration, security mechanisms.
+* **Hands-on & Reference:** Practical lab writeups, tool cheatsheets, and command one-liners.
+
+---
+
+### 🛠️ Built With
+* [Quartz v5](https://quartz.jzhao.xyz/)
+* [Obsidian](https://obsidian.md/)
+* GitHub Pages & GitHub Actions
