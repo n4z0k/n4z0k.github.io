@@ -11,8 +11,6 @@ Central hub for all Windows-related notes.
 
 ## Active Directory & Domain Services 
 
-- Kerberos & NTLM Authentication
-
 
 ---
 # Related 
