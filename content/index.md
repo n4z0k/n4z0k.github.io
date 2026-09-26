@@ -1,4 +1,4 @@
-# Hi, I'm N4z0k! 👋
+<h1 class="typewriter-container"> <span class="typewriter-text">Hi, I’m N4z0k!</span> 👋 </h1>
 
 <a href="https://tryhackme.com/p/N4z0k" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/TryHackMe-N4z0k-red?style=flat&logo=tryhackme&logoColor=white" alt="TryHackMe" /></a> <a href="https://www.credly.com/users/alfeze-ali/badges" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Credly-Badges-FF6B00?style=flat&logo=credly&logoColor=white" alt="Credly" /></a>
 

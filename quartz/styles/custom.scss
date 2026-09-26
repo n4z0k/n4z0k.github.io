@@ -5,3 +5,44 @@
 .article-title {
   display: none;
 }
+
+
+.typewriter-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--secondary); /* Le curseur clignotant */
+  width: 0;
+  animation: 
+    typing 4s steps(15, end) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Animation d'écriture, pause, effacement, pause */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  30%, 60% {
+    width: 15ch; /* Longueur exacte des 15 caractères de "Hi, I’m N4z0k!" */
+  }
+  85%, 100% {
+    width: 0;
+  }
+}
+
+/* Clignotement du curseur */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--secondary);
+  }
+}
