@@ -10,6 +10,19 @@
   display: none;
 }
 
+.breadcrumb-container {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  opacity: 0.85;
+}
+
+ul.toc-content.overflow > li > a.in-view {
+  color: var(--secondary);
+  font-weight: $boldWeight;
+  opacity: 1;
+}
+
 // Remove the default highlighted "tag" look on wikilinks/internal links —
 // keep them as plain colored links like external links, no background box.
 a.internal:not(.tag-link) {
