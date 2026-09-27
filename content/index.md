@@ -25,7 +25,7 @@ This site contains:
 Feel free to browse through the graph or jump into a topic below.
 
 ---
-## Knowledge Map
+## Explore the Vault
 
 <div class="knowledge-map">
 
