@@ -1,4 +1,4 @@
-# Markdown Cheatsheet
+# Markdown & Obsidian Cheatsheet
 
 Quick reference for the most commonly used Markdown syntax in Obsidian.
 
@@ -275,7 +275,8 @@ Comments are stored in the Markdown file but hidden in Reading View:
 ---
 # Related 
 
-- [[index|Home]]
+- [[MOC_Cheatsheet|Cheatsheets]]
+
 
 
 
