@@ -52,7 +52,7 @@ Feel free to browse through the graph or jump into a topic below.
 
 - [[MOC_Hands-on|Hands-on]]
 - [[MOC_Development|Development]]
-- [[MOC_Cheatsheet|Cheatsheets]]
+- [[MOC_Cheatsheets|Cheatsheets]]
 
 </div>
 
