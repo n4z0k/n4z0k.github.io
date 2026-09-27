@@ -6,6 +6,10 @@
   display: none;
 }
 
+.content-meta {
+  display: none;
+}
+
 // Remove the default highlighted "tag" look on wikilinks/internal links —
 // keep them as plain colored links like external links, no background box.
 a.internal:not(.tag-link) {

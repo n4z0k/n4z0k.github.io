@@ -1,3 +1,7 @@
+---
+title: N4z0k's Vault
+---
+
 <h1 class="typewriter-container"> <span class="typewriter-text">Hi, I’m N4z0k!</span> 👋 </h1>
 
 <div class="profile-badges">
