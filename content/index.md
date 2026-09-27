@@ -1,5 +1,6 @@
 ---
 title: N4z0k's Vault
+description: Hi, I'm N4z0k! I'm passionate about networking and cybersecurity. Here, you'll find my write-ups, cheat sheets, and notes covering systems administration, offensive security, and network engineering.
 ---
 
 <h1 class="typewriter-container"> <span class="typewriter-text">Hi, I’m N4z0k!</span> 👋 </h1>
