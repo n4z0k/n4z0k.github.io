@@ -3,7 +3,7 @@ author: Alfeze
 created: 2026-09-20
 ---
 
-# Tcpdump
+# TCPDump
 
 > **tcpdump** is a powerful command-line packet analyzer built on the `libpcap` library. It captures, filters, and analyzes network traffic passing through a specific interface in real time, with the ability to export captures to `.pcap` files for deep troubleshooting, security audits, and protocol analysis.
 

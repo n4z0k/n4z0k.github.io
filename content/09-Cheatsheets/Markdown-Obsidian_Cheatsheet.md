@@ -275,8 +275,7 @@ Comments are stored in the Markdown file but hidden in Reading View:
 ---
 # Related 
 
-- [[MOC_Cheatsheets|Cheatsheets]]
-
+- [[MOC_Cheatsheets|Cheatsheet]]
 
 
 

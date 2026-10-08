@@ -6,7 +6,6 @@ Central hub for security, administration, and auditing tools.
 ## Network Scanning & Discovery
 
 - [[Nmap]]
-
 ## Packet Analysis & Sniffing
 
 - [[Wireshark]]
@@ -14,7 +13,7 @@ Central hub for security, administration, and auditing tools.
 
 ## Web Application & Enumeration
 
-
+- *Coming soon*
 ## Password Attacks & Cracking
 
 - [[John_The_Ripper|John The Ripper]]
@@ -22,7 +21,7 @@ Central hub for security, administration, and auditing tools.
 
 ## OSINT & Reconnaissance
 
-
+- *Coming soon*
 
 ---
 ## Related

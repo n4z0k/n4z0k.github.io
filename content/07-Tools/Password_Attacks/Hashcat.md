@@ -5,7 +5,7 @@ created: 2026-09-24
 
 # Hashcat
 
->**Hashcat** is an open-source, ultra-fast password recovery tool optimized for GPU acceleration to crack hashes offline. It is used in security audits and pentesting to recover plaintext passwords using dictionary, mask, and rule-based attacks
+>**Hashcat** is an open-source, ultra-fast password recovery tool optimized for GPU acceleration to crack hashes offline. It is used in security audits and pentesting to recover plaintext passwords using dictionary, mask, and rule-based attacks.
 
 ---
 ## Basic Syntax

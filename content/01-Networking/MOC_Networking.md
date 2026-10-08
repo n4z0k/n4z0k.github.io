@@ -19,7 +19,7 @@ Central hub for all networking-related notes.
 
 ## Routing
 
-
+- *Coming soon*
 
 ## IP Services
 
@@ -28,6 +28,7 @@ Central hub for all networking-related notes.
 
 ## Network Security
 
+- *Coming soon*
 
 ---
 

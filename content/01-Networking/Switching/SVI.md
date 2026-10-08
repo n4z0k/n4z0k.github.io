@@ -2,7 +2,7 @@
 author: Alfeze
 created: 2026-08-29
 ---
-# SVI_Configuration
+# SVI Configuration
 
 > A Switch Virtual Interface (SVI) is a logical Layer 3 interface associated with a VLAN. On a Layer 2 switch, an SVI is commonly used to assign an IP address to the switch for remote management.
 

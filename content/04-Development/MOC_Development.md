@@ -9,11 +9,15 @@ Central hub for all development-related notes.
 
 ## WEB
 
+- [[JavaScript_Essentials|Javascript Essentials]]
 
+## Databases
+
+- [[SQL_Fundamentals|SQL Fundamentals]]
 
 ## Programming
 
-  
+- *Coming soon*
 
 ---
 ## Related
