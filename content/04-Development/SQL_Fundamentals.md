@@ -78,7 +78,6 @@ DROP DATABASE database_name;
 
 
 ---
-
 ## Table Statements
 
 ### CREATE TABLE
@@ -129,7 +128,6 @@ DROP TABLE table_name;
 
 
 ---
-
 ## CRUD Operations
 
 **CRUD** stands for **C**reate, **R**ead, **U**pdate, and **D**elete, which are considered the basic operations in any system that manages data.
@@ -181,9 +179,238 @@ In summary, **CRUD** operations results are fundamental for data operations and 
 
 These operations enable us to effectively manage and manipulate data within a database.
 
+---
+## Clauses 
+
+A clause is a part of a statement that specifies the criteria of the data being manipulated, usually by an initial statement. Clauses can help us define the type of data and how it should be retrieved or sorted. 
+
+In previous tasks, we already used some clauses, such as `FROM` that is used to specify the table we are accessing with our statement and `WHERE`, which specifies which records should be used.  
+
+We will focus on other clauses: `DISTINCT`, `GROUP BY`, `ORDER BY`, and `HAVING`.
+
+### DISTINCT Clause
+
+The `DISTINCT` clause is used to avoid duplicate records when doing a query, returning only unique values.
+
+Let's use a query `SELECT * FROM books` and observe the results below.
+
+![[Pasted image 20261008150501.png]]
+
+The query's output displays all the content of the table **books**, and the record **Ethical Hacking** is displayed twice. Let's perform the query again, but this time, using the `DISTINCT` clause.
+
+![[Pasted image 20261008150519.png]]
+
+The output shows that only five rows are returned, and just one instance of the **Ethical Hacking** record is displayed.
+
+### GROUP BY Clause
+
+The `GROUP BY` clause aggregates data from multiple records and **groups** the query results in columns. This can be helpful for aggregating functions.
+
+![[Pasted image 20261008151120.png]]
+
+In the example above, the records on the **book** table are regrouped by the result of the `COUNT` function. We already know that **Ethical hacking** is listed twice, so the total **count** is 2, placed at the end since it is **grouped** **by** count.
+
+### ORDER BY Clause
+
+The `ORDER BY` clause can be used to sort the records returned by a query in ascending or descending order. Using functions like `ASC` and `DESC` can help us to accomplish that, as shown below in the next two examples.
+
+**ASCENDING ORDER**
+
+![[Pasted image 20261008151247.png]]
+
+**DESCENDING ORDER**
+
+![[Pasted image 20261008152646.png]]
+
+We can observe the difference when sorting by ascending order using `ASC` and in descending order using `DESC`, both using the **published_date** as reference.
+
+### HAVING Clause
+
+The `HAVING` clause is used with other clauses to filter groups or results of records based on a condition. In the case of `GROUP BY`, it evaluates the condition to `TRUE` or `FALSE`, unlike the `WHERE` clause `HAVING` filters the results after the aggregation is performed.
+
+![[Pasted image 20261008153810.png]]
+
+In the example above, we can observe that the query returns the books with the names that contain the word **hack** and the proper count, as we learned before.
+
+----
+## Operators 
+
+### Logical Operators 
+
+These operators test the truth of a condition and return a boolean value of `TRUE` or `FALSE`. 
+### Like Operator
+
+The `LIKE` operator is commonly used in conjunction with clauses like `WHERE` in order to filter for specific patterns within a column.
+
+![[Pasted image 20261008154803.png]]
+
+The query above returns a list of records from the books filtered, but the ones using the `WHERE` clause that contains the word guide by using the `LIKE` operator.
+
+### AND Operator
+
+The `AND` operator uses multiple conditions within a query and returns `TRUE` if all of them are true.
+
+![[Pasted image 20261008154845.png]]
+
+The query above returns the book with the name **Bug Bounty Bootcamp**, which is under the category of **Offensive Security**.
+
+### OR Operator
+
+The `OR` operator combines multiple conditions within queries and returns `TRUE` if at least one of these conditions is true.
+
+![[Pasted image 20261008155039.png]]
+
+The query above returns books whose **names** include either **Android** or **IOS**.
+
+### NOT Operator
+
+The `NOT` operator reverses the value of a boolean operator, allowing us to exclude a specific condition.
+
+![[Pasted image 20261008155154.png]]
+
+The query above returns results where the description does not contain the word **guide**.
+
+
+### BETWEEN Operator
+
+The `BETWEEN` operator allows us to test if a value exists within a defined **range**.
+
+![[Pasted image 20261008155221.png]]
+
+The query above returns books whose **id** is **between 2** and **4**.
+
+### Comparison Operators
+
+The comparison operators are used to compare values and check if they meet specified criteria.
+
+### Equal To Operator
+
+The `=` (Equal) operator compares two expressions and determines if they are equal, or it can check if a value matches another one in a specific column.
+
+![[Pasted image 20261008155306.png]]
+
+The query above returns the book with the **exact name Designing Secure Software**.
+
+
+### Not Equal To Operator
+
+The `!=` (not equal) operator compares expressions and tests if they are not equal; it also checks if a value differs from the one within a column.
+
+![[Pasted image 20261008155338.png]]
+
+The query above returns books **except** those whose **category** is **Offensive Security**.
+
+### Less Than Operator
+
+Less Than Operator
+
+The `<` (less than) operator compares if the expression with a given value is lesser than the provided one.
+
+![[Pasted image 20261008155407.png]]
+
+The query above returns books that were published **before January 1, 2020**.
+
+### Greater Than Operator
+
+The `>` (greater than) operator compares if the expression with a given value is greater than the provided one.
+
+![[Pasted image 20261008155437.png]]
+
+The query above returns books published **after** **January 1, 2020**.
+
+### Less Than or Equal To and Greater Than or Equal To Operators
+
+
+The `<=` (Less than or equal) operator compares if the expression with a given value is less than or equal to the provided one. On the other hand, The `>=` (Greater than or Equal) operator compares if the expression with a given value is greater than or equal to the provided one. Let's observe some examples of both below.
+
+![[Pasted image 20261008155521.png]]
+
+The query above returns books **published on** **or before** **November 15, 2021**.
+
+![[Pasted image 20261008155537.png]]
+
+The query above returns books that were **published on or after November 2, 2021**.
 
 ---
+## Functions 
 
+### String Function
+
+Strings functions perform operations on a string, returning a value associated with it.
+
+### CONCAT() Function
+
+This function is used to add two or more strings together. It is useful to combine text from different columns.
+
+
+![[Pasted image 20261008164949.png]]
+
+This query concatenates the **name** and **category** columns from the **books** table into a single one named **book_info**.
+
+### GROUP_CONCAT() Function
+
+This function can help us to concatenate data from multiple rows into one field. Let's explore an example of its usage.
+
+![[Pasted image 20261008165114.png]]
+
+The query above groups the **books** by **category** and concatenates the titles of books within each category into a **single string**.
+
+### SUBSTRING() Function
+
+This function will retrieve a substring from a string within a query, starting at a determined position. The length of this substring can also be specified.
+
+![[Pasted image 20261008165254.png]]
+
+In the query above, we can observe how it extracts the first **four** characters from the **published_date** column and stores them in the **published_year** column.
+
+### LENGTH() Function
+
+This function returns the number of characters in a string. This includes spaces and punctuation. We can find an example below.
+
+![[Pasted image 20261008165423.png]]
+
+As we can observe above, the query calculates the length of the string within the **name** column and stores it in a column named **name_length**.
+
+**Aggregate Functions**
+
+These functions aggregate the value of multiple rows within one specified criteria in the query; It can combine multiple values into one result.
+
+### COUNT() Function
+
+This function returns the number of records within an expression, as the example below shows.
+
+![[Pasted image 20261008165517.png]]
+
+This query above counts the total number of rows in the **books** table. The result is **5**, as there are five books in the books table, and it's stored in the **total_books** column.
+
+### SUM() Function
+
+This function sums all values (not NULL) of a determined column.
+
+**Note:** There is no need to execute this query. This is just for example purposes.
+
+![[Pasted image 20261008165551.png]]
+
+The query above calculates the total sum of the **price** column. The result provides the aggregate price of all books in the column **total_price**.
+
+### MAX() Function
+
+This function calculates the maximum value within a provided column in an expression.
+
+![[Pasted image 20261008165625.png]]
+
+The query above retrieves the latest publication (maximum value) date from the **books** table. The result **2021-12-21** is stored in the column **latest_book**.
+
+### MIN() Function
+
+This function calculates the minimum value within a provided column in an expression.
+
+![[Pasted image 20261008165655.png]]
+
+The query above retrieves the earliest publication (minimum value) date from the **books** table. The result **2014-10-14** is stored in the **earliest_book** column.
+
+
+---
 ## Related 
 
 [[MOC_Development|Development]]

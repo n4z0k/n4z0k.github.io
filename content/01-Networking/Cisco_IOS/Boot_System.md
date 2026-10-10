@@ -2,7 +2,7 @@
 author: Alfeze
 created: 2026-08-29
 ---
-## Boot System
+# Boot System
 
 > The `boot system` command specifies which Cisco IOS image the device should load during the next boot. The IOS image is typically stored in flash memory.
 

@@ -273,7 +273,7 @@ Comments are stored in the Markdown file but hidden in Reading View:
 | Horizontal rule | `---` |
 
 ---
-# Related 
+## Related 
 
 - [[MOC_Cheatsheets|Cheatsheet]]
 

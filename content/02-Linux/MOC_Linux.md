@@ -9,7 +9,7 @@ Central hub for all Linux-related notes.
 - [[Shells]]
 
 ---
-# Related 
+## Related 
 
 - [[index|Home]]
 

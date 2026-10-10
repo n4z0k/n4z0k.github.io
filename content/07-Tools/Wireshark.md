@@ -123,7 +123,6 @@ The picture below shows Wireshark's main window.
 
 
 ----
-
 ## Related
 
 - [[MOC_Tools|Tools]]

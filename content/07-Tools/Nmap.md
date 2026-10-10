@@ -170,6 +170,15 @@ Saving Scan Report
 | `-oA <basename>`                                                    | Output in all major formats                                                                        |
 
 ---
+## Usage Examples
+
+```shell
+nmap -T4 -vv -F -Pn -sV --script vulners -oN scan.txt <IP_Cible>
+```
+
+
+---
+
 ## Related 
 
 - [[MOC_Tools|Tools]]

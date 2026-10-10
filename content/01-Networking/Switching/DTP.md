@@ -2,7 +2,7 @@
 author: Alfeze
 created: 2026-08-29
 ---
-## DTP Configuration
+# DTP Configuration
 
 > **DTP (Dynamic Trunking Protocol)** is a Cisco proprietary protocol used to dynamically negotiate whether a link operates as an **access link or trunk link**.
 

@@ -2,10 +2,11 @@
 author: Alfeze
 created: 2026-09-19
 ---
-
 # Shells
 
 > A command-line interpreter that provides an interface between the user and the operating system kernel, executing commands and managing scripts.
+
+[explainshell.com - match command-line arguments to their help text](https://explainshell.com/)
 
 ---
 ## Current Shell

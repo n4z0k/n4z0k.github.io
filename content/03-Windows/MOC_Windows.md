@@ -14,7 +14,7 @@ Central hub for all Windows-related notes.
 - *Coming soon*
 
 ---
-# Related 
+## Related 
 
 - [[index|Home]]
 

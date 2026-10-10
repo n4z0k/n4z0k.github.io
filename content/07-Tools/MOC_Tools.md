@@ -18,6 +18,7 @@ Central hub for security, administration, and auditing tools.
 
 - [[John_The_Ripper|John The Ripper]]
 - [[Hashcat]]
+- [[Hydra]]
 
 ## OSINT & Reconnaissance
 
