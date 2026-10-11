@@ -13,7 +13,8 @@ Central hub for security, administration, and auditing tools.
 
 ## Web Application & Enumeration
 
-- *Coming soon*
+- [[Gobuster]]
+
 ## Password Attacks & Cracking
 
 - [[John_The_Ripper|John The Ripper]]
