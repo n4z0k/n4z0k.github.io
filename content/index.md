@@ -39,7 +39,7 @@ Feel free to browse through the graph or jump into a topic below.
 </div>
 
 <div class="km-card">
-<div class="km-card-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h3>Security & Offense</h3></div>
+<div class="km-card-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h3>Cybersecurity</h3></div>
 
 - [[MOC_Security|Security]]
 - [[MOC_Pentesting|Pentesting]]
