@@ -6,6 +6,7 @@ Central hub for security, administration, and auditing tools.
 ## Network Scanning & Discovery
 
 - [[Nmap]]
+- *Coming soon (RustScan)*
 ## Packet Analysis & Sniffing
 
 - [[Wireshark]]

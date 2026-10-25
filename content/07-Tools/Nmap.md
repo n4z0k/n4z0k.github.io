@@ -176,6 +176,10 @@ Saving Scan Report
 nmap -T4 -vv -F -Pn -sV --script vulners -oN scan.txt <IP_Cible>
 ```
 
+```shell
+nmap -sS -sV -sC -p- -T4 <IP>
+```
+
 
 ---
 
