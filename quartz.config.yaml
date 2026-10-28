@@ -232,7 +232,7 @@ plugins:
       links:
         LinkedIn: https://www.linkedin.com/in/alfeze-ali
         GitHub: https://github.com/n4z0k
-        Email: mailto:alfeze.ali.pro@gmail.com
+        Email: mailto:alfeze.ali@proton.me
     layout:
       position: footer
       priority: 50
