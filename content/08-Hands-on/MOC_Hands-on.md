@@ -6,11 +6,12 @@ Central hub for all practical labs, CTF writeups, and security projects.
 ## TryHackMe Walkthroughs
 
 - *Coming soon*
-## RootMe
 
+## Hack The Box Walkthroughs
 
+- *Coming soon*
 
-## Network Labs 
+## Network Labs  (CCNA & CCNP)
 
 - *Coming soon*
 

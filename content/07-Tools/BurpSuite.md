@@ -139,4 +139,3 @@ You should find an alert box from the site indicating a successful XSS attack!
 ## Related 
 
 - [[MOC_Tools|Tools]]
-

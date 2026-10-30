@@ -22,7 +22,7 @@ mkdir ~/integrity-check && cd ~/integrity-check
 Example : 
 
 ```bash
-echo "a1b2c3d4e5f6...hash_string_here...  debian-12.0.0-amd64-netinst.iso" > check.txt
+echo "<HASH_Vendor>  debian-12.0.0-amd64-netinst.iso" > check.txt
 ```
 
 >**Syntax Rule:** The standard format strictly requires **two spaces** (or a tab) between the hash and the file name: `<hash> <filename>`
@@ -59,7 +59,6 @@ md5sum -c check.txt
 ## File Hashing & Integrity with Powershell
 
 >The `Get-FileHash` cmdlet computes the cryptographic hash of a file using a specified hash algorithm. It is essential in **incident response**, **threat hunting**, and **malware analysis** to verify file integrity, detect unauthorized tampering, and check samples against known threat intelligence indicators (IoCs).
-
 
 ### Syntax & Basic Usage
 
