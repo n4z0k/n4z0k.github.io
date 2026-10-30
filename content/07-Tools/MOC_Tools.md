@@ -28,6 +28,12 @@ Central hub for security, administration, and auditing tools.
 - [[Hashcat]]
 - [[Hydra]]
 
+## Reverse Engineering
+
+- [[Reverse_Engineering_Toolkit|Reverse Engineering Toolkit]]
+- REMnux VM - A Linux Toolki for Malware Analysis *coming soon*
+- FLARE-VM *coming soon*
+
 ## Digital Forensics
 
 - FTK Imager (*coming soon*)

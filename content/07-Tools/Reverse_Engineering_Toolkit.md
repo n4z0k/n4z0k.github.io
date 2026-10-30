@@ -66,5 +66,7 @@ created: 2026-10-30
 
 - [[MOC_Tools|Tools]]
 - [[MOC_Security|Security]]
+- REMnux VM - A Linux Toolki for Malware Analysis *coming soon*
+- FLARE-VM *coming soon*
 
 
