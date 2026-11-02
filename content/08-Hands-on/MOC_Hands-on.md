@@ -10,7 +10,6 @@ Central hub for all practical labs, CTF writeups, and security projects.
 ## Hack The Box Walkthroughs
 
 - *Coming soon*
-
 ## Network Labs  (CCNA & CCNP)
 
 - *Coming soon*
@@ -18,7 +17,6 @@ Central hub for all practical labs, CTF writeups, and security projects.
 ## Projects & Reports
 
 - *Coming soon*
-
 
 ---
 ## Related 

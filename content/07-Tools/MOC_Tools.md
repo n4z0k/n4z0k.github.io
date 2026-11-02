@@ -31,8 +31,8 @@ Central hub for security, administration, and auditing tools.
 ## Reverse Engineering
 
 - [[Reverse_Engineering_Toolkit|Reverse Engineering Toolkit]]
-- REMnux VM - A Linux Toolki for Malware Analysis *coming soon*
-- FLARE-VM *coming soon*
+- REMnux VM - A Linux Toolki for Malware Analysis (*coming soon*)
+- FLARE-VM (*coming soon*)
 
 ## Digital Forensics
 
@@ -44,7 +44,7 @@ Central hub for security, administration, and auditing tools.
 
 ## OSINT & Reconnaissance
 
-- OSINT Industries *coming soon*
+- OSINT Industries (*coming soon*)
 - Epios (*coming soon*)
 
 ---
