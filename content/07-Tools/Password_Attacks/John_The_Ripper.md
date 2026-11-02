@@ -149,8 +149,8 @@ john --single --format=[format] [path to file]
 john --single --format=raw-sha256 hashes.txt
 ```
 
-> [!A Note on File Formats in Single Crack Mode:]
->If you’re cracking hashes in single crack mode, you need to change the file format that you’re feeding John for it to understand what data to create a wordlist from. You do this by prepending the hash with the username that the hash belongs to, so according to the above example, we would change the file `hashes.txt`
+
+If you’re cracking hashes in single crack mode, you need to change the file format that you’re feeding John for it to understand what data to create a wordlist from. You do this by prepending the hash with the username that the hash belongs to, so according to the above example, we would change the file `hashes.txt`
 
 - **From** `1efee03cdcb96d90ad48ccc7b8666033`
 - **To** `mike:1efee03cdcb96d90ad48ccc7b8666033`
