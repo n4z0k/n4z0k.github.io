@@ -1,0 +1,79 @@
+enable
+configure terminal
+hostname SW26-2
+no ip domain-lookup
+service password-encryption
+enable secret Sae3Cyber!
+username admin privilege 15 secret Sae3Cyber!
+banner motd #Acces reserve - SAE3-CYBER03 - SW26-2#
+ip domain-name sae3cyber03.iut
+vtp mode transparent
+!
+! ---------- VLAN ----------
+vlan 150
+ name CLIENTS-PUBLICS
+ exit
+vlan 192
+ name CLIENTS-PRIVES
+ exit
+!
+! ---------- 802.1X : authentification par le serveur RADIUS du site ----------
+aaa new-model
+aaa authentication login default local
+aaa authentication dot1x default group radius
+aaa authorization network default group radius
+dot1x system-auth-control
+radius server RADIUS-S26
+ address ipv4 50.50.26.1 auth-port 1812 acct-port 1813
+ key RadiusSae3
+ exit
+!
+! ---------- Ports d'acces ----------
+! Syntaxe IOS 15 (2960). Sur un IOS 12.2 ancien, remplacer les deux lignes
+! "authentication port-control auto" + "dot1x pae authenticator" par "dot1x port-control auto"
+interface range FastEthernet0/1 - 10
+ description Clients prives - VLAN 192 (802.1X)
+ switchport mode access
+ switchport access vlan 192
+ authentication port-control auto
+ dot1x pae authenticator
+ spanning-tree portfast
+ exit
+interface range FastEthernet0/11 - 20
+ description Clients publics - VLAN 150
+ switchport mode access
+ switchport access vlan 150
+ spanning-tree portfast
+ exit
+!
+! ---------- Trunk vers R26 ----------
+interface FastEthernet0/24
+ description Trunk 802.1Q vers R26 Fe0/0
+ switchport mode trunk
+ switchport trunk allowed vlan 150,192
+ exit
+!
+! ---------- Adresse du NAS : VLAN 150 (pas dans le VLAN 192 controle par 802.1X) ----------
+! Le serveur RADIUS S26 est sur un autre switch (SW26-1) : la requete est routee par R26
+interface Vlan1
+ shutdown
+ exit
+interface Vlan150
+ ip address 150.150.26.250 255.255.255.0
+ no shutdown
+ exit
+ip default-gateway 150.150.26.254
+!
+! ---------- Acces console / SSH ----------
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+line console 0
+ logging synchronous
+ login authentication default
+ exit
+line vty 0 4
+ login authentication default
+ transport input ssh
+ exit
+end
+write memory

@@ -3,7 +3,7 @@ author: Alfeze
 created: 2026-10-06
 ---
 
-# Web_Client
+# Web Client
 
 > Short description of the BOX, its purpose, and what is being tested or implemented.
 

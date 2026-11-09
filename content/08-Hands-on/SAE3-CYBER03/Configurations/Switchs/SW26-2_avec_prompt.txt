@@ -1,0 +1,79 @@
+Switch>enable
+Switch#configure terminal
+Switch(config)#hostname SW26-2
+SW26-2(config)#no ip domain-lookup
+SW26-2(config)#service password-encryption
+SW26-2(config)#enable secret Sae3Cyber!
+SW26-2(config)#username admin privilege 15 secret Sae3Cyber!
+SW26-2(config)#banner motd #Acces reserve - SAE3-CYBER03 - SW26-2#
+SW26-2(config)#ip domain-name sae3cyber03.iut
+SW26-2(config)#vtp mode transparent
+!
+! ---------- VLAN ----------
+SW26-2(config)#vlan 150
+SW26-2(config-vlan)#name CLIENTS-PUBLICS
+SW26-2(config-vlan)#exit
+SW26-2(config)#vlan 192
+SW26-2(config-vlan)#name CLIENTS-PRIVES
+SW26-2(config-vlan)#exit
+!
+! ---------- 802.1X : authentification par le serveur RADIUS du site ----------
+SW26-2(config)#aaa new-model
+SW26-2(config)#aaa authentication login default local
+SW26-2(config)#aaa authentication dot1x default group radius
+SW26-2(config)#aaa authorization network default group radius
+SW26-2(config)#dot1x system-auth-control
+SW26-2(config)#radius server RADIUS-S26
+SW26-2(config-radius-server)#address ipv4 50.50.26.1 auth-port 1812 acct-port 1813
+SW26-2(config-radius-server)#key RadiusSae3
+SW26-2(config-radius-server)#exit
+!
+! ---------- Ports d'acces ----------
+! Syntaxe IOS 15 (2960). Sur un IOS 12.2 ancien, remplacer les deux lignes
+! "authentication port-control auto" + "dot1x pae authenticator" par "dot1x port-control auto"
+SW26-2(config)#interface range FastEthernet0/1 - 10
+SW26-2(config-if-range)#description Clients prives - VLAN 192 (802.1X)
+SW26-2(config-if-range)#switchport mode access
+SW26-2(config-if-range)#switchport access vlan 192
+SW26-2(config-if-range)#authentication port-control auto
+SW26-2(config-if-range)#dot1x pae authenticator
+SW26-2(config-if-range)#spanning-tree portfast
+SW26-2(config-if-range)#exit
+SW26-2(config)#interface range FastEthernet0/11 - 20
+SW26-2(config-if-range)#description Clients publics - VLAN 150
+SW26-2(config-if-range)#switchport mode access
+SW26-2(config-if-range)#switchport access vlan 150
+SW26-2(config-if-range)#spanning-tree portfast
+SW26-2(config-if-range)#exit
+!
+! ---------- Trunk vers R26 ----------
+SW26-2(config)#interface FastEthernet0/24
+SW26-2(config-if)#description Trunk 802.1Q vers R26 Fe0/0
+SW26-2(config-if)#switchport mode trunk
+SW26-2(config-if)#switchport trunk allowed vlan 150,192
+SW26-2(config-if)#exit
+!
+! ---------- Adresse du NAS : VLAN 150 (pas dans le VLAN 192 controle par 802.1X) ----------
+! Le serveur RADIUS S26 est sur un autre switch (SW26-1) : la requete est routee par R26
+SW26-2(config)#interface Vlan1
+SW26-2(config-if)#shutdown
+SW26-2(config-if)#exit
+SW26-2(config)#interface Vlan150
+SW26-2(config-if)#ip address 150.150.26.250 255.255.255.0
+SW26-2(config-if)#no shutdown
+SW26-2(config-if)#exit
+SW26-2(config)#ip default-gateway 150.150.26.254
+!
+! ---------- Acces console / SSH ----------
+SW26-2(config)#crypto key generate rsa general-keys modulus 1024
+SW26-2(config)#ip ssh version 2
+SW26-2(config)#line console 0
+SW26-2(config-line)#logging synchronous
+SW26-2(config-line)#login authentication default
+SW26-2(config-line)#exit
+SW26-2(config)#line vty 0 4
+SW26-2(config-line)#login authentication default
+SW26-2(config-line)#transport input ssh
+SW26-2(config-line)#exit
+SW26-2(config)#end
+SW26-2#write memory

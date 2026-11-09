@@ -1,0 +1,83 @@
+enable
+configure terminal
+hostname SW25
+no ip domain-lookup
+service password-encryption
+enable secret Sae3Cyber!
+username admin privilege 15 secret Sae3Cyber!
+banner motd #Acces reserve - SAE3-CYBER03 - SW25#
+ip domain-name sae3cyber03.iut
+vtp mode transparent
+!
+! ---------- VLAN ----------
+vlan 50
+ name SERVEURS-PUBLICS
+ exit
+vlan 150
+ name CLIENTS-PUBLICS
+ exit
+vlan 192
+ name CLIENTS-PRIVES
+ exit
+!
+! ---------- 802.1X : authentification par le serveur RADIUS du site ----------
+aaa new-model
+aaa authentication login default local
+aaa authentication dot1x default group radius
+aaa authorization network default group radius
+dot1x system-auth-control
+! Le 2950 ne connait pas la syntaxe "radius server <nom>" : syntaxe classique
+radius-server host 50.50.25.1 auth-port 1812 acct-port 1813 key RadiusSae3
+!
+! ---------- Ports d'acces ----------
+interface range FastEthernet0/1 - 10
+ description Clients prives - VLAN 192 (802.1X)
+ switchport mode access
+ switchport access vlan 192
+ dot1x port-control auto
+ spanning-tree portfast
+ exit
+interface range FastEthernet0/11 - 20
+ description Clients publics - VLAN 150
+ switchport mode access
+ switchport access vlan 150
+ spanning-tree portfast
+ exit
+interface range FastEthernet0/21 - 23
+ description Serveurs publics - VLAN 50
+ switchport mode access
+ switchport access vlan 50
+ spanning-tree portfast
+ exit
+!
+! ---------- Trunk vers R25 ----------
+interface FastEthernet0/24
+ description Trunk 802.1Q vers R25 Fe0/0
+ switchport mode trunk
+ switchport trunk allowed vlan 50,150,192
+ exit
+!
+! ---------- Adresse du NAS : dans le VLAN des serveurs (comme le VLAN "radius" du TP5) ----------
+! Pas dans le VLAN 192 controle par 802.1X
+interface Vlan1
+ shutdown
+ exit
+interface Vlan50
+ ip address 50.50.25.250 255.255.255.0
+ no shutdown
+ exit
+ip default-gateway 50.50.25.254
+!
+! ---------- Acces console / SSH ----------
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+line console 0
+ logging synchronous
+ login authentication default
+ exit
+line vty 0 4
+ login authentication default
+ transport input ssh
+ exit
+end
+write memory

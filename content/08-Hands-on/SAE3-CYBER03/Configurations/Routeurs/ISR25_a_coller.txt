@@ -1,0 +1,59 @@
+enable
+configure terminal
+hostname ISR25
+no ip domain-lookup
+service password-encryption
+enable secret Sae3Cyber!
+username admin privilege 15 secret Sae3Cyber!
+banner motd #Acces reserve - SAE3-CYBER03 - ISR25#
+ip domain-name sae3cyber03.iut
+ip cef
+!
+! ---------- QoS (methode du TP4) : etape 2 - politique de sortie ----------
+! Les flux video sont reconnus par leur marquage DSCP AF41 (34), pose a l'entree du reseau
+class-map match-all DSCP-VIDEO
+ match dscp af41
+ exit
+policy-map QOS-VIDEO
+ class DSCP-VIDEO
+  bandwidth percent 30
+  exit
+ class class-default
+  fair-queue
+  exit
+ exit
+!
+! ---------- Interfaces ----------
+interface GigabitEthernet0/0/0
+ description Backbone OSPF zone 0 - 30.0.0.0/24
+ ip address 30.0.0.25 255.255.255.0
+ service-policy output QOS-VIDEO
+ no shutdown
+ exit
+interface GigabitEthernet0/0/1
+ description Interco vers R25 Fe0/1 - 90.0.25.0/24
+ ip address 90.0.25.254 255.255.255.0
+ service-policy output QOS-VIDEO
+ no shutdown
+ exit
+!
+! ---------- OSPF : ABR entre la zone 0 et la zone 25 ----------
+router ospf 1
+ router-id 25.0.0.1
+ network 30.0.0.0 0.0.0.255 area 0
+ network 90.0.25.0 0.0.0.255 area 25
+ exit
+!
+! ---------- Acces console / SSH ----------
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+line console 0
+ logging synchronous
+ login local
+ exit
+line vty 0 4
+ login local
+ transport input ssh
+ exit
+end
+write memory

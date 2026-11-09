@@ -1,0 +1,39 @@
+Switch>enable
+Switch#configure terminal
+Switch(config)#hostname SW26-1
+SW26-1(config)#no ip domain-lookup
+SW26-1(config)#service password-encryption
+SW26-1(config)#enable secret Sae3Cyber!
+SW26-1(config)#username admin privilege 15 secret Sae3Cyber!
+SW26-1(config)#banner motd #Acces reserve - SAE3-CYBER03 - SW26-1#
+SW26-1(config)#ip domain-name sae3cyber03.iut
+!
+! Switch du reseau des serveurs publics du site n : pas de VLAN (VLAN 1 natif)
+SW26-1(config)#interface FastEthernet0/1
+SW26-1(config-if)#description Serveur S26 eth0
+SW26-1(config-if)#switchport mode access
+SW26-1(config-if)#spanning-tree portfast
+SW26-1(config-if)#exit
+SW26-1(config)#interface FastEthernet0/24
+SW26-1(config-if)#description Vers R26 E1/0
+SW26-1(config-if)#switchport mode access
+SW26-1(config-if)#exit
+SW26-1(config)#interface Vlan1
+SW26-1(config-if)#ip address 50.50.26.250 255.255.255.0
+SW26-1(config-if)#no shutdown
+SW26-1(config-if)#exit
+SW26-1(config)#ip default-gateway 50.50.26.254
+!
+! ---------- Acces console / SSH ----------
+SW26-1(config)#crypto key generate rsa general-keys modulus 1024
+SW26-1(config)#ip ssh version 2
+SW26-1(config)#line console 0
+SW26-1(config-line)#logging synchronous
+SW26-1(config-line)#login local
+SW26-1(config-line)#exit
+SW26-1(config)#line vty 0 4
+SW26-1(config-line)#login local
+SW26-1(config-line)#transport input ssh
+SW26-1(config-line)#exit
+SW26-1(config)#end
+SW26-1#write memory
